@@ -1,0 +1,46 @@
+startshape START
+size { s 1 x 0 y 0 }
+//tile { s 1 x -.5 }
+background { hue 40 sat 1 b 1 }
+rule START {
+    ROLLER {r -45 y 1 sat 1 s .05 b 1}
+}
+rule ROLLER {
+    ROLLER {y -.5}
+    SNAKEYEL {|h 40 h 20}
+}
+rule ROLLER .01 {}
+
+rule SNAKEYEL {
+    BOX {}
+    SNAKEYEL {x 1 h 0.1| }
+}
+rule SNAKEYEL .1 {
+    BOX {}
+    SNAKEYEL {x 1 h 0.1| r .5}
+}
+rule SNAKEYEL .1 {
+    BOX {}
+    SNAKEYEL {x 1 h 0.1| r -.5}
+}
+rule SNAKEYEL .05 { SNAKERED {|h -20}}
+rule SNAKEYEL .001 {}
+
+rule SNAKERED {
+    BOX {}
+    SNAKERED {x 1 h -.1| }
+}
+rule SNAKERED .1{
+    BOX {}
+    SNAKERED {x 1 h -.1| r .5}
+}
+rule SNAKERED .1{
+    BOX {}
+    SNAKERED {x 1 h -.1| r -.5}
+}
+rule SNAKERED .1 { SNAKEYEL {|h 20}}
+rule SNAKERED .001 {}
+
+rule BOX {
+    SQUARE {}
+}
