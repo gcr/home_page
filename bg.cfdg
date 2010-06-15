@@ -13,33 +13,33 @@ rule ROLLER .01 {}
 
 rule SNAKEYEL {
     BOX {}
-    SNAKEYEL {x 1 h 0.1| }
+    SNAKEYEL {x .1 h 0.01| }
 }
-rule SNAKEYEL .1 {
+rule SNAKEYEL .01 {
     BOX {}
-    SNAKEYEL {x 1 h 0.1| r .5}
+    SNAKEYEL {x .1 h 0.01| r .5}
 }
-rule SNAKEYEL .1 {
+rule SNAKEYEL .01 {
     BOX {}
-    SNAKEYEL {x 1 h 0.1| r -.5}
+    SNAKEYEL {x .1 h 0.01| r -.5}
 }
-rule SNAKEYEL .05 { SNAKERED {|h -20}}
-rule SNAKEYEL .001 {}
+rule SNAKEYEL .005 { SNAKERED {|h -20}}
+rule SNAKEYEL .0001 {}
 
 rule SNAKERED {
     BOX {}
-    SNAKERED {x 1 h -.1| }
+    SNAKERED {x .1 h -.01| }
 }
-rule SNAKERED .1{
+rule SNAKERED .01{
     BOX {}
-    SNAKERED {x 1 h -.1| r .5}
+    SNAKERED {x .1 h -.01| r .5}
 }
-rule SNAKERED .1{
+rule SNAKERED .01{
     BOX {}
-    SNAKERED {x 1 h -.1| r -.5}
+    SNAKERED {x .1 h -.01| r -.5}
 }
-rule SNAKERED .1 { SNAKEYEL {|h 20}}
-rule SNAKERED .001 {}
+rule SNAKERED .01 { SNAKEYEL {|h 20}}
+rule SNAKERED .0001 {}
 
 rule BOX {
     SQUARE {}
