@@ -1,10 +1,10 @@
 <!DOCTYPE HTML>
-<html lang="en">
-<head>
+<html lang="en"> <head>
 	<meta charset="UTF-8">
 	<title>_gcr's profile</title>
     <style type="text/css">
 
+        /* Resets and margins */
         html, body {
             height: 100%;
             margin: 0;
@@ -16,10 +16,14 @@
             padding: 0;
         }
 
+        /* Links */
         a {
             text-decoration: none;
+            font-weight: bold;
             padding-left: .5em;
+            margin-left: -.5em;
             padding-right: .5em;
+            margin-right: -.5em;
             padding-top: 0.2em;
             padding-bottom: 0.2em;
         }
@@ -33,6 +37,8 @@
         a:visited {
             color: #000;
         }
+
+        /* Eye candy */
         body {
             background-image: url('./bg.jpg');
             background-color: #ff8300;
@@ -42,6 +48,7 @@
             font-family: 'Trebuchet MS' 'Georgia' serif;
         }
 
+        /* Layout */
         .hcenter {
             position: relative;
             text-align: center;
@@ -49,7 +56,6 @@
             margin-right: auto;
             width: 80%;
         }
-
         table.vcenter {
             height: 100%;
             width: 100%;
@@ -61,11 +67,11 @@
             text-align: center;
         }
 
+        /* Text */
         .header {
             font-size: 300%;
             font-weight: bold;
-            /* for that bit of extra blemish */
-            color: #412;
+            color: #412; /* for that bit of extra blemish */
             -webkit-text-shadow: 0px 0px 3px #000;
                -moz-text-shadow: 0px 0px 3px #000;
              -opera-text-shadow: 0px 0px 3px #000;
@@ -80,32 +86,48 @@
             margin: 0 auto;
         }
 
-        .constrained {
+        /* List layout */
+/*      .constrained {
             position: relative;
-            width: 40%;
+            width: 80%;
             margin: 0 auto;
         }
-        ul {
+*/      ul.main_list {
             margin-left: 55%;
             list-style-type: none;
         }
-        li {
+        .main_list li {
             text-align: left;
+        }
+        ul.projects {
+            margin-left: 2em;
         }
     </style>
 </head>
 <body>
-
+    <!-- There must be a better way of vertically centering something of
+    unknown height. Oh well. -->
     <table class="vcenter"><tr><td><div class="hcenter">
         <div class="header">_gcr</div>
         <img class="underline" src="underline.png" />
         <div class="constrained">
-            <ul>
+            <ul class="main_list">
                 <li>
-                    <a href="">Contact</a>
+                    <a href="my_email.jpg">Contact</a>
                 </li>
                 <li>
-                    <a href="">Projects</a>
+                    <a href="http://github.com/gcr">Github</a>
+                </li>
+                <li>&nbsp;<!-- spacer --></li>
+                <li>
+                    Projects:
+                    <ul class="projects">
+                        <li><a
+                            href="http://github.com/robots">Robot programming
+                            (git)</a></li>
+                    <li><a href="/lights/The_Listening.pdf">Sheet music</a> (<a
+                            href="http://github.com/lights">git</a>)</li>
+                    </ul>
                 </li>
             </ul>
         </div>
