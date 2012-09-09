@@ -1,0 +1,36 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <style type="text/css">
+    body {
+        text-align: center;
+    }
+    #authcode {
+        margin-top: 0.5em;
+        background: #aaa;
+    }
+  </style>
+
+  <body>
+    <h1>Thank you for using Tumblesocks!</h1>
+
+    Your auth code is:
+    <div id="authcode">.....</div>
+
+    Please copy+paste this back into Emacs, when prompted.
+
+    <script type="text/javascript">
+      window.onload = function() {
+         var url = window.location.toString();
+         url.match(/\?(.+)$/);
+         var params = RegExp.$1;
+         var params = params.split("&");
+         for(var i=0;i<params.length;i++)
+         {
+             var tmp = params[i].split("=");
+             if (tmp[0] == "oauth_verifier") {
+                document.getElementById("authcode").innerText = tmp[1];
+             }
+         }
+      };
+    </script>
+  </body>
+</html>
