@@ -5,7 +5,7 @@
     }
     #authcode {
         margin-top: 0.5em;
-        background: #aaa;
+        background: #eef;
     }
   </style>
 
@@ -15,7 +15,22 @@
     Your auth code is:
     <div id="authcode">.....</div>
 
-    Please copy+paste this back into Emacs, when prompted.
+    <br />
+    Please copy+paste this code back into Emacs:
+    <br />
+    <div style="display: inline-block; text-align: left;">
+    <ol>
+        <li>Click inside the minibuffer at the bottom of the screen</li>
+        <li>Hit Enter once, even if it says "Starting Firefox..."</li>
+        <li>Paste your code in. (On Linux, you may use the middle mouse
+        button)</li>
+        <li>Hit Enter again to link Tumblesocks to your account.</li>
+    </ol>
+    </div>
+
+    <br />
+    If something goes wrong, run <tt>M-x
+        tumblesocks-api-forget-authentication</tt> and try again.
 
     <script type="text/javascript">
       window.onload = function() {
