@@ -27,7 +27,7 @@
          {
              var tmp = params[i].split("=");
              if (tmp[0] == "oauth_verifier") {
-                document.getElementById("authcode").innerText = tmp[1];
+                document.getElementById("authcode").textContent = tmp[1];
              }
          }
       };
